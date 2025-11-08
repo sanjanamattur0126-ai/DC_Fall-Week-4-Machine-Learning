@@ -7,17 +7,17 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+<body class="bg-gradient-to-br from-green-50 to-indigo-100 min-h-screen">
     <div class="container mx-auto px-4 py-8">
         <div class="max-w-4xl mx-auto">
             <!-- Header -->
             <div class="text-center mb-8">
                 <h1 class="text-4xl font-bold text-gray-800 mb-2">Teachable Machine Image Model</h1>
-                <p class="text-gray-600">Machine Learning in the Browser</p>
+                <p class="text-gray-600">Image recognition with Machine Learning</p>
             </div>
 
             <!-- Main Content Area -->
-            <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="bg-purple-100 rounded-lg shadow-lg p-8">
                 <!-- 
                     ============================================
                     PASTE YOUR TEACHABLE MACHINE SNIPPET BELOW
@@ -34,8 +34,14 @@
                 -->
                 
                 <!-- START: Paste your Teachable Machine code here -->
-               <div>Teachable Machine Image Model</div>
-            <button type="button" onclick="init()">Start</button>
+               <div>
+                <h3 class="text-lg font-semibold text-gray-900"> Glasses vs. No Glasses</h3>
+
+               </div>
+            <button 
+            
+            class="rounded-lg bg-blue-100 px-20  text-black hover:bg-green-100 transition"
+            type="button" onclick="init()">Click: Start</button>
             <div id="webcam-container"></div>
             <div id="label-container"></div>
             <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
@@ -45,7 +51,7 @@
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
     // the link to your model provided by Teachable Machine export panel
-            const URL = "./tm-my-image-model/";
+            const URL = "./tm-my-image-model-2/";
 
             let model, webcam, labelContainer, maxPredictions;
 
